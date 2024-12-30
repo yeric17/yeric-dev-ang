@@ -1,13 +1,27 @@
-<nav>
-    <ul>
-        <li>
-            <a routerLink="/about-me" routerLinkActive="active">About Me</a>
-        </li>
-        <li>
-            <a routerLink="/projects" routerLinkActive="active">Projects</a>
-        </li>
-        <li>
-            <a routerLink="/contact" routerLinkActive="active">Contact</a>
-        </li>
-    </ul>
+<nav class="navbar">
+    <button (click)="isActive.set(!isActive())" class="navbar__button btn-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Zm0 4.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+        </svg>              
+    </button>
+    <div class="navbar__list-container" [class.active]="isActive()" #navbarListContainer>
+        <header class="navbar__header">
+            <button class="navbar__close-button btn-icon" (click)="isActive.set(false)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+                    <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+                </svg>                                 
+            </button>
+        </header>
+        <ul class="navbar__list" >
+            <li class="navbar__item">
+                <a class="navbar__link" routerLink="/about-me" routerLinkActive="active" (click)="isActive.set(false)">About Me</a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" routerLink="/projects" routerLinkActive="active" (click)="isActive.set(false)">Projects</a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" routerLink="/contact" routerLinkActive="active" (click)="isActive.set(false)">Contact</a>
+            </li>
+        </ul>
+    </div>
 </nav>
