@@ -1,10 +1,13 @@
 :root{
     // Colors
     --color-primary: #00619e;
+    --color-primary-dark: #12253b;
+
     --color-secondary: #e15166;
     --color-white: #fafafa;
     
     --color-on-white: #333;
+    --color-on-primary: var(--color-white);
 
     // Font
     --font-size: 16px;

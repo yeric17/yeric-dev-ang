@@ -1,6 +1,17 @@
 .header{
-    height: 48px;
-    display: flex;
+    height: 3.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;  
     justify-content: space-between;
     padding-inline: var(--spacing-3);
+    background-color: var(--color-white);
+    background-image: linear-gradient(90deg, transparent, transparent 90%, var(--color-primary-dark) 90%);
+    box-shadow: var(--shadow-sm);
+}
+
+.header__title{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: var(--color-primary-dark);
 }
