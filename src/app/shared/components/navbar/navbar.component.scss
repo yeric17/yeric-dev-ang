@@ -80,11 +80,16 @@
     .navbar__link{
         color: var(--color-on-primary);
         &:hover{
-            background-image: linear-gradient(180deg, var(--color-primary-dark), var(--color-primary-dark) 95%, var(--color-secondary) 95%, var(--color-secondary));
+            background-color: rgba(255,255,255,0.1);
         }
+        
+        border-bottom: 2.5px solid transparent;
+        border-top: 2.5px solid var(--color-primary-dark);
     }
     .navbar__link.active{
-        background-image: linear-gradient(180deg, var(--color-primary-dark), var(--color-primary-dark) 95%, var(--color-secondary) 95%, var(--color-secondary));
+        background: linear-gradient(var(--color-primary-dark), var(--color-primary-dark)) padding-box,
+        linear-gradient(to right, var(--color-primary), var(--color-secondary)) border-box;
+
     }
     .navbar__close-button{
         display: none;
