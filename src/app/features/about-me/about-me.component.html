@@ -3,4 +3,49 @@
     <p class="section__text">Tengo {{yearsOfExperienceDeveloper}} años de experiencía como Desarrollador de Software Full-stack y {{yearsOfExperienceData}} en modelación de datos para proyectos estadísticos. He trabajado principalmente en la creación de aplicaciones web enfocadas en tableros de indicadores y herramientas para optimizar procesos.</p>
 </app-section>
 <app-section title="Skills" variant="light">
+    <div class="section__skills">
+        <article class="skill-group skill-group--frontend" [style.--row-span]="frontendSkills().length > 4 ? 2 : 1">
+            <h4 class="skill-group__title">Frontend</h4>
+            <div class="skill-group__items">
+                @for(skill of frontendSkills(); track $index){
+                    <app-skill-card [skill]="skill" [color]="skill.color"></app-skill-card>
+                }
+            </div>
+        </article>
+        <article class="skill-group skill-group--backend" [style.--row-span]="backendSkills().length > 4 ? 2 : 1">
+            <h4 class="skill-group__title">Backend</h4>
+            <div class="skill-group__items">
+                @for(skill of backendSkills(); track $index){
+                    <app-skill-card [skill]="skill" [color]="skill.color"></app-skill-card>
+                }
+            </div>
+        </article>
+        <article class="skill-group skill-group--data" [style.--row-span]="databaseSkills().length > 4 ? 2 : 1">
+            <h4 class="skill-group__title">Database</h4>
+            <div class="skill-group__items">
+                @for(skill of databaseSkills(); track $index){
+                    <app-skill-card [skill]="skill" [color]="skill.color"></app-skill-card>
+                }
+            </div>
+        </article>
+        <article class="skill-group skill-group--tools" [style.--row-span]="testingSkills().length > 4 ? 2 : 1">
+            <h4 class="skill-group__title">Testing</h4>
+            <div class="skill-group__items">
+                @for(skill of testingSkills(); track $index){
+                    <app-skill-card [skill]="skill" [color]="skill.color"></app-skill-card>
+                }
+            </div>
+        </article>
+        <article class="skill-group skill-group--devops" [style.--row-span]="devopsSkills().length > 4 ? 2 : 1">
+            <h4 class="skill-group__title">Devops</h4>
+            <div class="skill-group__items">
+                @for(skill of devopsSkills(); track $index){
+                    <app-skill-card [skill]="skill" [color]="skill.color"></app-skill-card>
+                }
+            </div>
+        </article>
+    </div>
+</app-section>
+<app-section title="Experience" variant="dark">
+
 </app-section>

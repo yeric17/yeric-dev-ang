@@ -1,0 +1,11 @@
+<div class="skill-card">
+    <h3 class="skill-card__name" [style.--color]="color()">{{skill().name}}</h3>
+    <div class="skill-card__image-container">
+        <img class="skill-card__image" src="images/skills/{{skill().image}}" alt="{{skill().name}}" class="skill-card__image">
+    </div>
+    @if(skill().experience){
+        <div>
+            <span class="skill-card__exp">{{skill().experience}}</span>
+        </div>
+    }
+</div>
