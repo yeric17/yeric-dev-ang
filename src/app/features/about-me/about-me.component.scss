@@ -46,3 +46,9 @@
 //     grid-area: database;
 // }
 
+app-timeline{
+    display: grid;
+    justify-items: center;
+    margin-inline: auto;
+    max-width: var(--max-width-container);
+}

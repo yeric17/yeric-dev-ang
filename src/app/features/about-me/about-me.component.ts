@@ -3,10 +3,18 @@ import { BannerComponent } from './components/banner/banner.component';
 import { SectionComponent } from './components/section/section.component';
 import { Skill, skills } from './data/skills.data';
 import { SkillCardComponent } from './components/skill-card/skill-card.component';
+import { TimelineComponent } from '../../shared/components/timeline/timeline.component';
+import { experiences } from './data/experience.data';
+import { TimeLineInfo } from '../../shared/components/timeline/models/timeline.model';
 
 @Component({
   selector: 'app-about-me',
-  imports: [BannerComponent, SectionComponent, SkillCardComponent],
+  imports: [
+    BannerComponent,
+    SectionComponent,
+    SkillCardComponent,
+    TimelineComponent
+  ],
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss']
 })
@@ -16,6 +24,7 @@ export class AboutMeComponent {
   yearsOfExperienceData: number;
 
   protected skills = signal<Skill[]>(skills);
+  protected experience = signal<TimeLineInfo[]>(experiences);
 
   protected frontendSkills = computed(() => this.skills().filter(skill => skill.type === 'frontend'));
   protected backendSkills = computed(() => this.skills().filter(skill => skill.type === 'backend'));

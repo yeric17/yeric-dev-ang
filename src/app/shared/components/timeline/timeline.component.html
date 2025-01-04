@@ -1,0 +1,14 @@
+
+<ul class="time-line">
+    @for(item of timeLines(); track $index){
+        <li class="time-line__item">
+            <div class="time-line__badge"></div>
+            <article class="time-line__card">
+                <h3 class="time-line__title">{{item.title}}</h3>
+                <h4 class="time-line__subtitle">{{item.subtitle}}</h4>
+                <p class="time-line__details">{{item.description}}</p>
+                <span class="time-line__info">{{item.info}}</span>
+            </article>
+        </li>
+    }
+</ul>
