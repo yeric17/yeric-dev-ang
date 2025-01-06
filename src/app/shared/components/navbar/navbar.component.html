@@ -12,6 +12,7 @@
                 </svg>                                 
             </button>
         </header>
+        
         <ul class="navbar__list" >
             <li class="navbar__item">
                 <a class="navbar__link" routerLink="/about-me" fragment="profile" [class.active]="currentFragment() === 'profile' || currentFragment() === 'profile-2'" (click)="isActive.set(false)">Profile</a>
@@ -23,7 +24,12 @@
                 <a class="navbar__link" routerLink="/about-me" fragment="experience" [class.active]="currentFragment() === 'experience'" (click)="isActive.set(false)">Experience</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__link" routerLink="/about-me" fragment="contact" [class.active]="currentFragment() === 'contact'" (click)="isActive.set(false)">Contact</a>
+                <a class="btn btn-secondary sm" href="files/CYFR Curriculum.pdf" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="btn__icon">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                    </svg>                      
+                    <span class="btn__text">Curriculum</span>
+                </a>
             </li>
         </ul>
     </div>
