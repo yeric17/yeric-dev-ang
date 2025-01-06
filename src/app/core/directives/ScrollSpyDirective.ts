@@ -10,19 +10,21 @@ export class ScrollSpyDirective {
     private currentSection: string|null = null;
     element = inject(ElementRef);
 
-
-
+    children:any
+    childrenReversed:any
+    constructor(){
+        this.children = this.element.nativeElement.children;
+    }
 
 
 
     @HostListener('window:scroll', ['$event'])
     onScroll = (event: any) => {
         let currentSection: string|null = null;
-        const children = this.element.nativeElement.children;
 
-        const current = children.length - [...children].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 120 ) - 1
+        const current = this.children.length - [...this.children].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 120 ) - 1
 
-        const id = children[current]?.id;
+        const id = this.children[current]?.id;
 
         if (id) {
             currentSection = id;
