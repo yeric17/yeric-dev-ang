@@ -46,7 +46,7 @@
     text-align: center;
 }
 .banner__social{
-    margin-top: var(--spacing-4);
+   
     display: flex;
     gap: var(--spacing-2);
 }
@@ -69,4 +69,11 @@
         color: #0077b5;
     
     }
+}
+.banner__actions{
+    margin-top: var(--spacing-4);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-4);
+    align-items: center;
 }
