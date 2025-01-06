@@ -14,13 +14,16 @@
         </header>
         <ul class="navbar__list" >
             <li class="navbar__item">
-                <a class="navbar__link" routerLink="/about-me" routerLinkActive="active" (click)="isActive.set(false)">About Me</a>
+                <a class="navbar__link" routerLink="/about-me" fragment="profile" [class.active]="currentFragment() === 'profile' || currentFragment() === 'profile-2'" (click)="isActive.set(false)">Profile</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__link" routerLink="/projects" routerLinkActive="active" (click)="isActive.set(false)">Projects</a>
+                <a class="navbar__link" routerLink="/about-me" fragment="skills" [class.active]="currentFragment() === 'skills'" (click)="isActive.set(false)">Skills</a>
             </li>
             <li class="navbar__item">
-                <a class="navbar__link" routerLink="/contact" routerLinkActive="active" (click)="isActive.set(false)">Contact</a>
+                <a class="navbar__link" routerLink="/about-me" fragment="experience" [class.active]="currentFragment() === 'experience'" (click)="isActive.set(false)">Experience</a>
+            </li>
+            <li class="navbar__item">
+                <a class="navbar__link" routerLink="/about-me" fragment="contact" [class.active]="currentFragment() === 'contact'" (click)="isActive.set(false)">Contact</a>
             </li>
         </ul>
     </div>

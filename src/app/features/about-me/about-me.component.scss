@@ -1,3 +1,6 @@
+.fake-window{
+    // overflow: scroll;
+}
 .section__text{
     max-width: var(--max-width-text);
     margin-inline: auto;
@@ -51,4 +54,5 @@ app-timeline{
     justify-items: center;
     margin-inline: auto;
     max-width: var(--max-width-container);
+    margin-bottom: 300px;
 }
