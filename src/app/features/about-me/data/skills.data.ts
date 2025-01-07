@@ -75,12 +75,12 @@ export const skills: Skill[] = [
         type: 'database',
         color: '#00758f',
     },
-    {
-        name: 'Docker',
-        image: 'docker.webp',
-        type: 'devops',
-        color: '#0db7ed',
-    },
+    // {
+    //     name: 'Docker',
+    //     image: 'docker.webp',
+    //     type: 'devops',
+    //     color: '#0db7ed',
+    // },
     {
         name: 'Github Actions',
         image: 'github-actions.png',
@@ -101,3 +101,4 @@ export const skills: Skill[] = [
         color: '#f57f17',
     }
 ]
+

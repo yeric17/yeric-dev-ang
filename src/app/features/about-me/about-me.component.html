@@ -1,4 +1,4 @@
-<div scrollSpy [spiedTags]="['APP-SECTION','APP-BANNER']" class="fake-window" (sectionChange)="changeSection($event)">
+<div scrollSpy [spiedTags]="['APP-SECTION','APP-BANNER']" class="fake-window" (sectionChange)="changeSection($event)" class="page-container">
     <app-banner></app-banner>
     <app-section title="Profile" variant="dark" id="profile">
         <p class="section__text">I have {{yearsOfExperienceDeveloper}} years of experience as a Full-stack Software Developer and {{yearsOfExperienceData}} years in data modeling for statistical projects. I have mainly worked on creating web applications focused on dashboards and tools to optimize processes.</p>
@@ -49,6 +49,25 @@
     </app-section>
     <app-section title="Experience" variant="dark" id="experience">
         <app-timeline [timeLines]="experience()"></app-timeline>
+    </app-section>
+    <app-section title="About Me" variant="light" id="about-me">
+        
+        <p class="section__text">
+            My name is Carlos Yeric Fonseca Rios, and I am from Bogotá, Colombia. I currently work at Ipsos as part of a Latin America development team, collaborating with professionals from Mexico, Chile, Argentina, Peru, and Brazil.
+        </p>
+        <p class="section__text">
+            Some of my career achievements include receiving recognition for embodying one of the company's core values, 'Simplicity.' Additionally, I have contributed to the development of applications aimed at optimizing processes and reducing costs, as well as creating dashboards for major clients.
+        </p>
+        <p class="section__text">
+            My current goal is to continue growing in the programming world, developing my leadership skills with the aim of one day leading development teams or launching my own business. I aspire for this venture to have a positive impact on society.
+        </p>
+    </app-section>
+    <app-section title="Projects" variant="dark" id="projects">
+        <div class="working-section">
+            <p>
+                I will be adding my projects soon.
+            </p>
+        </div>
     </app-section>
 </div>
 
