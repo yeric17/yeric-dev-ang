@@ -62,4 +62,9 @@ app-timeline{
     align-items: center;
     font-size: var(--font-size-xl);
     border: 3px dashed var(--color-primary);
+    padding-inline: var(--spacing-4);
+}
+
+.working-section__temp{
+    font-size: clamp(1rem, 5vw, 2rem);
 }
