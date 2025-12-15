@@ -12,36 +12,8 @@
     max-width: var(--max-width-container);
     margin-inline: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-
-    gap: var(--spacing-4);
-
-}
-
-.skill-group{
-    --row-span: 1;
-    background: white;
-    border-radius: 8px;
-    // background-image: url('../../../../public/images/skills/background.webp');
-    background-size: cover;
-    background: linear-gradient(var(--color-white), var(--color-white)) padding-box
-    ,linear-gradient(-125deg, var(--color-primary), var(--color-secondary)) border-box;
-    border: 3px solid transparent;
-    grid-row: span var(--row-span);
-}
-
-.skill-group__items{
-    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: var(--spacing-2);
-    padding: var(--spacing-4);
-}
-.skill-group__title{
-    text-align: center;
-    padding-top: var(--spacing-3);
-    font-size: var(--font-size-xl);
-    font-weight: 500;
-    color: var(--color-primary-dark);
+    gap: var(--spacing-4);
 }
 
 
