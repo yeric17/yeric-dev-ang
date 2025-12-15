@@ -3,3 +3,9 @@
 @use "./styles/fonts";
 @use "./styles/variables";
 @use "./styles/buttons";
+
+.time-line__list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}

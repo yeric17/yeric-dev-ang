@@ -4,13 +4,24 @@ export const experiences: TimeLineInfo[] = [
     {
         title: 'Software Developer',
         subtitle: 'Ipsos',
-        description: 'Developed web applications for data visualization, analysis, and process optimization using Angular, .NET, and SQL Server as part of the LATAM team. Also developed new AI-driven applications that not only optimized processes but also reduced costs, resulting in financial returns for the company.',
+        description: `<ul class="time-line__list">
+            <li>Fullstack development using <strong>.NET Core 6+</strong>, <strong>Angular 12+</strong>, and <strong>SQL Server</strong>.</li>
+            <li>Development of interactive dashboards for data analysis and reporting.</li>
+            <li>Implementation of automation tools and internal systems to improve operational efficiency.</li>
+            <li>Participation in architecture design, requirement analysis, and CI/CD deployments using <strong>GitHub Actions</strong>.</li>
+            <li>Development of interfaces and reports to support business decision-making.</li>
+        </ul>`,
         info: 'November 2022 - Present'
     },
     {
         title: 'Scripting and Data Processing Assistant',
         subtitle: 'Ipsos',
-        description: 'Developed scripts using JavaScript and Visual Basic to process interviews for opinion studies, primarily created on the company\'s own platforms. Implemented templates for online project work, which were not available in the department at the time and became an option for new project acquisitions.',
+        description: `<ul class="time-line__list">
+            <li>Development of web-based questionnaires using <strong>JavaScript</strong>, <strong>HTML</strong>, and <strong>CSS</strong>.</li>
+            <li>Requirement analysis and implementation of custom interactive behaviors for market research studies.</li>
+            <li>Collaboration with internal stakeholders to ensure quality, usability, and functional accuracy.</li>
+            <li>Optimization and automation of scripting and data processing workflows.</li>
+        </ul>`,
         info: 'February 2017 - November 2022'
     }
 ];

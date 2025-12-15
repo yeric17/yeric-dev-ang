@@ -6,7 +6,7 @@
             <article class="time-line__card">
                 <h3 class="time-line__title">{{item.title}}</h3>
                 <h4 class="time-line__subtitle">{{item.subtitle}}</h4>
-                <p class="time-line__details">{{item.description}}</p>
+                <div class="time-line__details" [innerHTML]="item.description"></div>
                 <span class="time-line__info">{{item.info}}</span>
             </article>
         </li>

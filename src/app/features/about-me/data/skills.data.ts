@@ -14,7 +14,7 @@ export const skills: Skill[] = [
         image: 'angular.webp',
         type: 'frontend',
         color: '#4da6ff',
-        experience: 2,
+        experience: 3,
     },
     {
         name: 'JavaScript',
@@ -47,7 +47,7 @@ export const skills: Skill[] = [
         name: '.NET',
         image: 'dotnet.png',
         type: 'backend',
-        experience: 2,
+        experience: 3,
         color: '#512bd4',
     },
     {
@@ -60,7 +60,7 @@ export const skills: Skill[] = [
         name: 'SQL Server',
         image: 'sql-server.png',
         type: 'database',
-        experience: 2,
+        experience: 3,
         color: '#cc2927',
     },
     {
@@ -79,7 +79,7 @@ export const skills: Skill[] = [
         name: 'Github Actions',
         image: 'github-actions.png',
         type: 'devops',
-        experience: 2,
+        experience: 3,
         color: '#2088ff',
     },
     {
@@ -93,6 +93,13 @@ export const skills: Skill[] = [
         image: 'playwright.png',
         type: 'testing',
         color: '#f57f17',
+    },
+    {
+        name: "Ionic",
+        image: 'ionic.webp',
+        type: 'frontend',
+        color: '#3880ff',
+        experience: 1,
     }
 ]
 

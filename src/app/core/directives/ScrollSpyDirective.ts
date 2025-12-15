@@ -22,13 +22,22 @@ export class ScrollSpyDirective {
     onScroll = (event: any) => {
         let currentSection: string|null = null;
 
-        const current = this.children.length - [...this.children].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 120 ) - 1
+        // Verificar si estamos cerca del final de la página
+        const isNearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
 
-        const id = this.children[current]?.id;
+        if (isNearBottom) {
+            // Si estamos cerca del final, activar la última sección
+            const lastChild = this.children[this.children.length - 1];
+            currentSection = lastChild?.id || null;
+        } else {
+            const current = this.children.length - [...this.children].reverse().findIndex((section) => window.scrollY >= section.offsetTop - 120 ) - 1
+            const id = this.children[current]?.id;
 
-        if (id) {
-            currentSection = id;
+            if (id) {
+                currentSection = id;
+            }
         }
+
         if (currentSection !== this.currentSection) {
             this.currentSection = currentSection;
             this.sectionChange.emit(this.currentSection);
