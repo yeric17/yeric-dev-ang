@@ -1,22 +1,19 @@
 <div scrollSpy [spiedTags]="['APP-SECTION','APP-BANNER']" class="fake-window" (sectionChange)="changeSection($event)" class="page-container">
     <app-banner></app-banner>
-    <app-section title="Profile" variant="dark" id="profile">
-        <p class="section__text">Fullstack Software Developer with more than 3 years of experience building web applications using .NET Core, Angular, and SQL Server.
-I have led projects focused on data analysis, automation, internal process optimization, and the development of strategic tools, including solutions supported by artificial intelligence.
-
-My background in engineering and digital technologies provides a holistic approach to developing scalable, maintainable, and user-centered software, combining strong logic, design thinking, and technology.</p>
+    <app-section [title]="'sections.profile.title' | translate" variant="dark" id="profile">
+        <p class="section__text">{{ 'sections.profile.description' | translate }}</p>
     </app-section>
-    <app-section title="Skills" variant="light" id="skills">
+    <app-section [title]="'sections.skills.title' | translate" variant="light" id="skills">
         <div class="section__skills">
             @for(skill of skills(); track $index){
                 <app-skill-card [skill]="skill" [color]="skill.color"></app-skill-card>
             }
         </div>
     </app-section>
-    <app-section title="Experience" variant="dark" id="experience">
+    <app-section [title]="'sections.experience.title' | translate" variant="dark" id="experience">
         <app-timeline [timeLines]="experience()"></app-timeline>
     </app-section>
-    <app-section title="Projects" variant="light" id="projects">
+    <app-section [title]="'sections.projects.title' | translate" variant="light" id="projects">
         <div class="section__projects">
             @for(project of projects(); track $index) {
                 <app-project-card [project]="project"></app-project-card>

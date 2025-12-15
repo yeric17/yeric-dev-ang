@@ -1,0 +1,52 @@
+{
+  "header": {
+    "title": "Yeric Fonseca"
+  },
+  "navbar": {
+    "profile": "Perfil",
+    "skills": "Habilidades",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "resume": "Currículum"
+  },
+  "banner": {
+    "name": "Yeric Fonseca",
+    "title": "Desarrollador de Software",
+    "contactMe": "Contáctame"
+  },
+  "sections": {
+    "profile": {
+      "title": "Perfil",
+      "description": "Desarrollador de Software Fullstack con más de 3 años de experiencia construyendo aplicaciones web usando .NET Core, Angular y SQL Server.\nHe liderado proyectos enfocados en análisis de datos, automatización, optimización de procesos internos y desarrollo de herramientas estratégicas, incluyendo soluciones respaldadas por inteligencia artificial.\n\nMi formación en ingeniería y tecnologías digitales proporciona un enfoque holístico para desarrollar software escalable, mantenible y centrado en el usuario, combinando lógica sólida, pensamiento de diseño y tecnología."
+    },
+    "skills": {
+      "title": "Habilidades"
+    },
+    "experience": {
+      "title": "Experiencia"
+    },
+    "projects": {
+      "title": "Proyectos"
+    }
+  },
+  "experience": {
+    "ipsos_developer": {
+      "title": "Desarrollador de Software",
+      "subtitle": "Ipsos",
+      "description": "<ul class=\"time-line__list\">\n            <li>Desarrollo Fullstack usando <strong>.NET Core 6+</strong>, <strong>Angular 12+</strong> y <strong>SQL Server</strong>.</li>\n            <li>Desarrollo de dashboards interactivos para análisis de datos y reportes.</li>\n            <li>Implementación de herramientas de automatización y sistemas internos para mejorar la eficiencia operacional.</li>\n            <li>Participación en diseño de arquitectura, análisis de requerimientos y despliegues CI/CD usando <strong>GitHub Actions</strong>.</li>\n            <li>Desarrollo de interfaces y reportes para apoyar la toma de decisiones empresariales.</li>\n        </ul>",
+      "info": "Noviembre 2022 - Presente"
+    },
+    "ipsos_assistant": {
+      "title": "Asistente de Scripting y Procesamiento de Datos",
+      "subtitle": "Ipsos",
+      "description": "<ul class=\"time-line__list\">\n            <li>Desarrollo de cuestionarios web usando <strong>JavaScript</strong>, <strong>HTML</strong> y <strong>CSS</strong>.</li>\n            <li>Análisis de requerimientos e implementación de comportamientos interactivos personalizados para estudios de investigación de mercado.</li>\n            <li>Colaboración con stakeholders internos para asegurar calidad, usabilidad y precisión funcional.</li>\n            <li>Optimización y automatización de flujos de scripting y procesamiento de datos.</li>\n        </ul>",
+      "info": "Febrero 2017 - Noviembre 2022"
+    }
+  },
+  "projects": {
+    "dsg_app": {
+      "name": "Aplicación móvil para servicios de transporte y seguridad",
+      "description": "Aplicación móvil desarrollada con Ionic y Angular que permite a los usuarios solicitar servicios de transporte y seguridad de manera rápida y segura. Incluye funcionalidades como geolocalización en tiempo real y notificaciones push.\n\nSe realizaron las siguientes tareas:\n\n- Diseño de la interfaz en Figma.\n- Desarrollo del frontend con Ionic y Angular.\n- Integración con servicios de backend para gestión de usuarios y solicitudes.\n- Pruebas y optimización para asegurar un rendimiento óptimo en dispositivos móviles."
+    }
+  }
+}

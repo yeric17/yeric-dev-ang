@@ -1,8 +1,9 @@
 import { Component, input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-section',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './section.component.html',
   styleUrl: './section.component.scss'
 })

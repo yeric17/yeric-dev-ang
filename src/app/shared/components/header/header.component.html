@@ -1,6 +1,28 @@
 <header class="header">
     <span class="header__title">
         <span>Yeric</span><span>Fonseca</span>
+        <div class="lang-dropdown" #dropdownContainer>
+            <button class="lang-dropdown__button" (click)="toggleDropdown()" [class.active]="isDropdownOpen()">
+                <img [src]="getCurrentLanguage().flag" [alt]="getCurrentLanguage().name" class="lang-dropdown__flag" />
+                <span class="lang-dropdown__name">{{ getCurrentLanguage().code.toUpperCase() }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="lang-dropdown__icon" [class.rotate]="isDropdownOpen()">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </button>
+            <div class="lang-dropdown__menu" [class.active]="isDropdownOpen()">
+                @for(lang of languages; track lang.code) {
+                    <button 
+                        class="lang-dropdown__item" 
+                        [class.selected]="currentLang() === lang.code"
+                        (click)="selectLanguage(lang.code)">
+                        <img [src]="lang.flag" [alt]="lang.name" class="lang-dropdown__item-flag" />
+                        <span class="lang-dropdown__item-name">{{ lang.name }}</span>
+                    </button>
+                }
+            </div>
+        </div>
     </span>
+
     <app-navbar />
+  
 </header>
