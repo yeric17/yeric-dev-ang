@@ -10,6 +10,9 @@ import { ActivatedRoute } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { ScrollSpyDirective } from '../../core/directives/ScrollSpyDirective';
 import { NavbarService } from '../../shared/components/navbar/services/navbar.services';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { projects } from './data/projects.data';
+import { Project } from './models/project.model';
 
 @Component({
   selector: 'app-about-me',
@@ -18,7 +21,8 @@ import { NavbarService } from '../../shared/components/navbar/services/navbar.se
     SectionComponent,
     SkillCardComponent,
     TimelineComponent,
-    ScrollSpyDirective
+    ScrollSpyDirective,
+    ProjectCardComponent
   ],
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss']
@@ -34,6 +38,7 @@ export class AboutMeComponent implements OnInit {
 
   protected skills = signal<Skill[]>(skills);
   protected experience = signal<TimeLineInfo[]>(experiences);
+  protected projects = signal<Project[]>(projects);
 
   protected frontendSkills = computed(() => this.skills().filter(skill => skill.type === 'frontend'));
   protected backendSkills = computed(() => this.skills().filter(skill => skill.type === 'backend'));

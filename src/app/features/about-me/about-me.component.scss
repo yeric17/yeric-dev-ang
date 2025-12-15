@@ -52,19 +52,10 @@ app-timeline{
     max-width: var(--max-width-container);
 }
 
-
-.working-section{
-    height: 300px;
-    margin-inline: auto;
+.section__projects{
     max-width: var(--max-width-container);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: var(--font-size-xl);
-    border: 3px dashed var(--color-primary);
-    padding-inline: var(--spacing-4);
-}
-
-.working-section__temp{
-    font-size: clamp(1rem, 5vw, 2rem);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-6);
 }

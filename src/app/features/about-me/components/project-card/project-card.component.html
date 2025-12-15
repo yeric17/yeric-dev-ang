@@ -1,0 +1,104 @@
+<div class="project-card">
+  <!-- Preview de la imagen -->
+  <div class="project-card__preview" (click)="openModal()">
+    <img 
+      [src]="project().images[0]" 
+      [alt]="project().name"
+      class="project-card__preview-image"
+    />
+    <div class="project-card__preview-overlay">
+      <svg class="project-card__preview-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6" />
+      </svg>
+      <span class="project-card__preview-text">Ver más imágenes</span>
+    </div>
+  </div>
+  
+  <div class="project-card__content">
+    <h3 class="project-card__title">{{ project().name }}</h3>
+    
+    <div class="project-card__technologies">
+      <h4 class="project-card__technologies-title">Tecnologías:</h4>
+      <ul class="project-card__tech-list">
+        @for(tech of project().technologies; track $index) {
+          <li class="project-card__tech-item">
+            @if(getTechImage(tech)) {
+              <img [src]="getTechImage(tech)" [alt]="tech" class="project-card__tech-icon" />
+            }
+            <span>{{ tech }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Modal con el carousel -->
+@if(isModalOpen) {
+  <div class="modal-backdrop" (click)="onModalBackdropClick($event)">
+    <div class="modal-content">
+      <button class="modal-close" (click)="closeModal()" aria-label="Cerrar modal">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+      
+      <div class="modal-body">
+        <!-- Sección izquierda: Carousel -->
+        <div class="modal-gallery">
+          <div class="modal-gallery__main">
+            <button class="modal-gallery__nav modal-gallery__nav--prev" (click)="previousImage()" aria-label="Imagen anterior">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            <img 
+              [src]="project().images[currentImageIndex]" 
+              [alt]="project().name"
+              class="modal-gallery__image"
+            />
+            <button class="modal-gallery__nav modal-gallery__nav--next" (click)="nextImage()" aria-label="Imagen siguiente">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+          
+          <div class="modal-gallery__thumbnails">
+            @for(image of project().images; track $index) {
+              <img 
+                [src]="image" 
+                [alt]="project().name + ' - imagen ' + ($index + 1)"
+                class="modal-gallery__thumbnail"
+                [class.modal-gallery__thumbnail--active]="currentImageIndex === $index"
+                (click)="selectImage($index)"
+              />
+            }
+          </div>
+        </div>
+        
+        <!-- Sección derecha: Información -->
+        <div class="modal-info">
+          <div class="modal-info__content">
+            <h2 class="modal-info__title">{{ project().name }}</h2>
+            <p class="modal-info__description">{{ project().description }}</p>
+            
+            <div class="modal-info__technologies">
+              <h3 class="modal-info__technologies-title">Tecnologías utilizadas:</h3>
+              <ul class="modal-info__tech-list">
+                @for(tech of project().technologies; track $index) {
+                  <li class="modal-info__tech-item">
+                    @if(getTechImage(tech)) {
+                      <img [src]="getTechImage(tech)" [alt]="tech" class="modal-info__tech-icon" />
+                    }
+                    <span>{{ tech }}</span>
+                  </li>
+                }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
